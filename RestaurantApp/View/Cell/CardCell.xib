@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0rs-7h-Q1A" customClass="CardCell" customModule="RestaurantApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="185"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="185"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="asG-Ei-FU3">
+                        <rect key="frame" x="5" y="5" width="110" height="175"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ya-k1-w3q">
+                                <rect key="frame" x="0.0" y="0.0" width="110" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="XOm-Ps-fcR"/>
+                                    <constraint firstAttribute="height" constant="140" id="eq0-g0-zcO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product_price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyF-SQ-USN">
+                                <rect key="frame" x="2" y="162" width="108" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="9dD-Uu-9Sd"/>
+                                    <constraint firstAttribute="height" constant="13" id="St3-Ma-y7d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product_Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFG-JR-CoB">
+                                <rect key="frame" x="2" y="144" width="108" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="108" id="Enk-j9-Vix"/>
+                                    <constraint firstAttribute="height" constant="14" id="zTF-Nb-4Po"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU1-RN-HPf">
+                                <rect key="frame" x="86" y="6" width="20" height="22"/>
+                                <state key="normal" image="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteFood:" destination="0rs-7h-Q1A" eventType="touchUpInside" id="zIf-qF-egd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5ya-k1-w3q" firstAttribute="leading" secondItem="asG-Ei-FU3" secondAttribute="leading" id="86N-hE-oTG"/>
+                            <constraint firstItem="qU1-RN-HPf" firstAttribute="top" secondItem="asG-Ei-FU3" secondAttribute="top" constant="6" id="Afh-ll-W3M"/>
+                            <constraint firstAttribute="trailing" secondItem="mFG-JR-CoB" secondAttribute="trailing" id="G7i-6Q-G7S"/>
+                            <constraint firstItem="mFG-JR-CoB" firstAttribute="leading" secondItem="asG-Ei-FU3" secondAttribute="leading" constant="2" id="HKT-vQ-31l"/>
+                            <constraint firstAttribute="trailing" secondItem="JyF-SQ-USN" secondAttribute="trailing" id="QLB-yA-ocg"/>
+                            <constraint firstAttribute="trailing" secondItem="qU1-RN-HPf" secondAttribute="trailing" constant="4" id="RfU-DK-sOT"/>
+                            <constraint firstAttribute="trailing" secondItem="5ya-k1-w3q" secondAttribute="trailing" id="Wrl-5Y-mZB"/>
+                            <constraint firstItem="JyF-SQ-USN" firstAttribute="leading" secondItem="asG-Ei-FU3" secondAttribute="leading" constant="2" id="aYl-yM-JHC"/>
+                            <constraint firstItem="JyF-SQ-USN" firstAttribute="top" secondItem="mFG-JR-CoB" secondAttribute="bottom" constant="4" id="gLA-cF-VPx"/>
+                            <constraint firstItem="mFG-JR-CoB" firstAttribute="top" secondItem="5ya-k1-w3q" secondAttribute="bottom" constant="4" id="mrt-sS-mpH"/>
+                            <constraint firstItem="5ya-k1-w3q" firstAttribute="top" secondItem="asG-Ei-FU3" secondAttribute="top" id="x3E-xw-B8L"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="asG-Ei-FU3" firstAttribute="leading" secondItem="0rs-7h-Q1A" secondAttribute="leading" constant="5" id="4KA-lW-0mh"/>
+                <constraint firstAttribute="trailing" secondItem="asG-Ei-FU3" secondAttribute="trailing" constant="5" id="8j8-bv-woi"/>
+                <constraint firstAttribute="bottom" secondItem="asG-Ei-FU3" secondAttribute="bottom" constant="5" id="drQ-vP-kMY"/>
+                <constraint firstItem="asG-Ei-FU3" firstAttribute="top" secondItem="0rs-7h-Q1A" secondAttribute="top" constant="5" id="ruk-e8-YMu"/>
+            </constraints>
+            <size key="customSize" width="120" height="207"/>
+            <connections>
+                <outlet property="bgView" destination="asG-Ei-FU3" id="jSK-PP-puq"/>
+                <outlet property="imageView" destination="5ya-k1-w3q" id="Ul7-XG-Mbz"/>
+                <outlet property="productName" destination="mFG-JR-CoB" id="EPS-1A-E22"/>
+                <outlet property="productPrice" destination="JyF-SQ-USN" id="Y7t-DH-bTr"/>
+            </connections>
+            <point key="canvasLocation" x="211.59420289855075" y="110.82589285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
+    </resources>
+</document>
